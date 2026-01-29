@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import {
   Target,
   Users,
@@ -98,7 +98,7 @@ export default function FlowDiagnostic() {
   };
 
   // --- Animation Variants ---
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -108,7 +108,7 @@ export default function FlowDiagnostic() {
     exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: -10 },
     visible: (i: number) => ({
       opacity: 1,
